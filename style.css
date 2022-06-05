@@ -8,9 +8,9 @@
 
 :root {
 	--color-gold: #bdae82;
-	--font-size: 20px;
+	--font-size: 18px;
+	--font-size-mobile: 16px;
 }
-
 
 body {
 	background-color: #000000;
@@ -31,7 +31,6 @@ body {
 	height: 50px;
 }
 
-
 .logo {
 	background-image: url('./assets/svg/logo1.svg');
 	background-size: contain;
@@ -49,15 +48,15 @@ body {
 	filter: brightness(0.85);
 }
 
-li {
+.nav-item {
 	list-style-type: none;
 	padding: 0 10px;
 	cursor: pointer;
 	font-size: var(--font-size);
 }
 
-li:hover,
-a:hover {
+.nav-item:hover,
+.link:hover {
 	color: var(--color-gold);
 }
 
@@ -67,7 +66,7 @@ a:hover {
 	align-items: center;
 }
 
-main {
+.main {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -89,7 +88,7 @@ main {
 	cursor: pointer;
 }
 
-footer {
+.footer {
 	max-width: 1366px;
 	min-width: 610px;
 	margin: 0 auto;
@@ -101,32 +100,32 @@ footer {
 	height: 50px;
 }
 
-footer svg {
+.logo-rs {
 	position: relative;
 	top: 0;
 }
 
 .left-footer,
-footer a {
+.school-link {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	font-size: var(--font-size);
 }
 
-span:nth-child(1),
-span:nth-child(2) {
+.copyright:nth-child(1),
+.copyright:nth-child(2) {
 	margin-right: 7px;
 	cursor: default;
 }
 
-span a {
+.link {
 	text-decoration: none;
 }
 
-span a:hover {
+.link:hover {
 	-webkit-text-decoration: var(--color-gold) double underline;
-    text-decoration: var(--color-gold) double underline;
+  text-decoration: var(--color-gold) double underline;
 }
 
 .logo-rs {
@@ -211,4 +210,15 @@ span a:hover {
         -moz-transform:rotate(720deg);
         -o-transform:rotate(360deg);
         transform:rotate(360deg);}
+}
+
+@media screen and (max-width: 850px) {
+
+	  .nav-item {
+			font-size: var(--font-size-mobile);
+		}
+
+		.left-footer {
+			font-size: var(--font-size-mobile);
+		}
 }
