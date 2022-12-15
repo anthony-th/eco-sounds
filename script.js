@@ -23,12 +23,12 @@
             }
 
             var images = {
-                'crimson': './assets/img/crimson.jpg',
-                'forest': './assets/img/forest.jpg',
-                'lark': './assets/img/lark.jpg',
-                'nightingale': './assets/img/nightingale.jpg',
-                'slavka': './assets/img/slavka.jpg',
-                'thrush': './assets/img/thrush.jpg',
+                'crimson': './assets/img/crimson.webp',
+                'forest': './assets/img/forest.webp',
+                'lark': './assets/img/lark.webp',
+                'nightingale': './assets/img/nightingale.webp',
+                'slavka': './assets/img/slavka.webp',
+                'thrush': './assets/img/thrush.webp',
             };
 
             $.each(images, function (key, val) {
@@ -74,7 +74,7 @@ function changeImage (event) {
         audioPlay.pause();
         audioPlay.currentTime = 0;
         backgroundImg.forEach((img, index) => {
-            img.setAttribute('style', `background-image: url(./assets/img/${event.target.dataset.song}.jpg)`);
+            img.setAttribute('style', `background-image: url(./assets/img/${event.target.dataset.song}.webp)`);
             audioPlay.src = `./assets/audio/${event.target.dataset.song}.mp3`;
             audioPlay.currentTime = 0;
             audioPlay.play();
@@ -93,7 +93,7 @@ function changeImage (event) {
 
     else if (event.target.classList.contains('nav-item')) {
         backgroundImg.forEach((img, index) => {
-            img.setAttribute('style', `background-image: url(./assets/img/${event.target.dataset.song}.jpg)`);
+            img.setAttribute('style', `background-image: url(./assets/img/${event.target.dataset.song}.webp)`);
             audioPlay.src = `./assets/audio/${event.target.dataset.song}.mp3`;
             audioPlay.currentTime = 0;
             audioPlay.play();
@@ -135,7 +135,7 @@ function changePlayLogo() {
     if (logoCheck) {
         btnCheck.classList.remove('btn-active');
         backgroundImg.forEach((img, index) => {
-            img.setAttribute('style', `background-image: url(./assets/img/forest.jpg)`);
+            img.setAttribute('style', `background-image: url(./assets/img/forest.webp)`);
             audioPlay.src = `./assets/audio/forest.mp3`;
             audioPlay.currentTime = 0;
             audioPlay.play();
